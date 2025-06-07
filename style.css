@@ -1,0 +1,83 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #e8f0f2; /* azul clarinho */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #44555a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background: #ffffffdd;
+  padding: 40px 35px;
+  border-radius: 20px;
+  box-shadow: 0 8px 18px rgba(68, 85, 90, 0.15);
+  max-width: 380px;
+  width: 90%;
+  text-align: center;
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 1.9rem;
+  margin-bottom: 28px;
+  color: #3a576f;
+}
+
+#frequencia, #decibeis {
+  font-size: 1.4rem;
+  margin: 18px 0;
+  font-weight: 500;
+  color: #576b7a;
+  transition: color 0.25s ease;
+}
+
+.alerta-volume {
+  margin-top: 18px;
+  font-weight: 600;
+  color: #d95763;
+  display: none;
+}
+
+button {
+  margin-top: 32px;
+  background: #7fa6b3;
+  border: none;
+  padding: 14px 38px;
+  font-weight: 600;
+  color: #fff;
+  font-size: 1.15rem;
+  border-radius: 35px;
+  cursor: pointer;
+  box-shadow: 0 5px 12px #6790a0aa;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background: #608293;
+}
+
+.barra {
+  height: 20px;
+  border-radius: 15px;
+  background: #c5d4db;
+  margin: 20px 0 30px;
+  box-shadow: inset 0 0 5px #a5b5bf;
+  overflow: hidden;
+}
+
+.preenchimento {
+  height: 100%;
+  width: 0;
+  background: #7fa6b3;
+  border-radius: 15px 0 0 15px;
+  transition: width 0.3s ease;
+}

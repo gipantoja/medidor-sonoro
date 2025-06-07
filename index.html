@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Medidor de Frequência Sonora</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Medidor de Frequência Sonora</h1>
+    <p id="frequencia">Frequência: -- Hz</p>
+    <p id="decibeis">Volume: -- dB</p>
+    <p id="alerta-volume" class="alerta-volume">⚠️ Volume alto! Risco de danos auditivos.</p>
+
+    <h2>Comparação: Linear vs Logarítmico</h2>
+    <div class="comparacao-barras">
+      <div>
+        <p>Escala Linear</p>
+        <div class="barra">
+          <div id="barra-linear" class="preenchimento"></div>
+        </div>
+      </div>
+      <div>
+        <p>Escala Logarítmica</p>
+        <div class="barra">
+          <div id="barra-log" class="preenchimento"></div>
+        </div>
+      </div>
+    </div>
+
+    <button id="iniciar">Iniciar Medição</button>
+    <p class="aviso">⚠️ Permita o acesso ao microfone para funcionar.</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
