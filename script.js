@@ -31,7 +31,23 @@ async function iniciarMedição() {
 
       if (decibeis !== null) {
         document.getElementById('decibeis').innerText = `Volume: ${decibeis.toFixed(1)} dB`;
-      }
+      
+const barraLinear = document.getElementById('barra-linear');
+const barraLog = document.getElementById('barra-log');
+
+if (barraLinear && barraLog) {
+  // Normaliza o volume médio
+  const volumeNormalizado = Math.min(decibeis / 100, 1); // valor entre 0 e 1
+
+  // Barra linear (cresce proporcional ao volume)
+  barraLinear.style.width = `${volumeNormalizado * 100}%`;
+
+  // Barra logarítmica (cresce suavemente)
+  const volumeLog = Math.log10(1 + volumeNormalizado * 9); // transforma de 0–1 em 0–1 log
+  barraLog.style.width = `${volumeLog * 100}%`;
+}
+
+}
 
       requestAnimationFrame(medirSom);
     }
